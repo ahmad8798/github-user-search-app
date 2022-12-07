@@ -1,14 +1,16 @@
 import axios from 'axios'
-import React, { useState } from 'react'
-
+import React, { useEffect, useState } from 'react'
+import Aos from 'aos'
 export default function RepositoryCard() {
 
-
+useEffect(()=>{
+  Aos.init({duration:500})
+})
   function RepositoryCardComponent(props) {
     return (
       
 
-        <div className='row card-row border mt-4'>
+        <div data-aos = 'fade-left' className='row card-row border mt-4'>
           <div className='col-7 d-flex justify-content-center mt-3'>
             <p><strong>{props.name}</strong></p>
             

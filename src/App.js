@@ -6,7 +6,10 @@ import RepositaryCard from './Components/RepositoryCard'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle'
 import NavBar from './Components/NavBar';
+
+
 function App() {
+  
   return (
     <>
      <Routes>

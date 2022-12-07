@@ -1,6 +1,11 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 export default function UserProfileCard() {
+  useEffect(()=>{
+      Aos.init({duration:500})
+  })
 
   const [apiData,SetApiData] = useState([])
   const [user,setUser] = useState()
@@ -11,9 +16,7 @@ export default function UserProfileCard() {
     console.log(apiData);
   }
 
-  useEffect(()=>{
-   
-  })
+
   
  
   return (
@@ -27,7 +30,7 @@ export default function UserProfileCard() {
                 <div  className='col-12 d-flex justify-content-center'>
                     <div className='row'>
                         <div className='col-12 d-flex justify-content-center mt-3'>
-                            <div className={`My-card border rounded w-100 ${display}`}>
+                            <div data-aos ="fade-left" className={`My-card border rounded w-100 ${display}`}>
                                 <div className='card-row d-flex justify-content-center mt-3'>
                                   <img src={apiData.avatar_url} className='img-fluid mx-auto   img-thumbnail w-25'/>
                                   <a href={apiData.html_url} className='btn btn-primary w-25 mx-auto mt-5 h-25' target='_blank'>View Profile</a>

@@ -18,10 +18,10 @@ export default function NavBar() {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
-                                    <NavLink to='/'className="nav-link active" aria-current="page" href="#">Home</NavLink>
+                                    <NavLink to='/'className="nav-link active" aria-current="page" href="#">Users</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink to='repositary-card' className="nav-link" href="#">Repositary</NavLink>
+                                    <NavLink to='repositary-card' className="nav-link" href="#">Repositaries</NavLink>
                                 </li>
 
                             </ul>
