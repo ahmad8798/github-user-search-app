@@ -3,9 +3,7 @@ import axios from 'axios'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 export default function UserProfileCard() {
-  useEffect(() => {
-    Aos.init({ duration: 500 })
-  })
+
 
   const [apiData, SetApiData] = useState([])
   const [user, setUser] = useState('ahmad8798')
@@ -19,6 +17,7 @@ export default function UserProfileCard() {
   useEffect(()=>{
     
         getApiData()
+        Aos.init({ duration: 500 })
   },[])
 
 
@@ -35,21 +34,20 @@ export default function UserProfileCard() {
               <div className='col-12 d-flex justify-content-center mt-3'>
                 <div data-aos="fade-down-left" className='My-card border rounded w-100'>
                   <div className='card-row d-flex justify-content-center mt-3'>
-                    <img src={apiData.avatar_url} className='img-fluid mx-auto   img-thumbnail w-25' />
-                    <a href={apiData.html_url} className='btn btn-primary w-25 mx-auto mt-5 h-25' target='_blank'>View Profile</a>
+                    <img src={apiData.avatar_url} className='img-fluid mx-auto  w-25 h-25 border rounded-circle' />
+                    <a href={apiData.html_url} className='btn btn-outline-secondary profile-btn mx-auto mt-4 w-50 h-25' target='_blank'>View Profile</a>
                   </div>
                   <div className='card-row d-flex justify-content-center mt-3 '>
 
-                    <p className='mx-auto'><strong>User Name:</strong> {apiData.login}</p>
-                    <p className='mx-auto'><strong>Repositaries:</strong> {apiData.public_repos}</p>
+                    <p className='mx-auto'><strong>{apiData.login}</strong></p>
+                    <p className='mx-auto'><strong>Repositaries: </strong>{apiData.public_repos}</p>
 
 
                   </div>
                   <div className='card-row d-flex justify-content-center mt-3 '>
-                    <p className='mx-auto'><strong>Location:</strong>{apiData.location}</p>
-                    <p className='mx-auto'><strong>Created:</strong>{apiData.created_at}</p>
-
-                  </div>
+                    
+                    <p className='mx-auto'><strong>Profile Created:</strong>{apiData.created_at}</p>
+                 </div>
 
 
                 </div>
