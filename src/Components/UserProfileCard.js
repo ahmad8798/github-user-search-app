@@ -35,7 +35,7 @@ export default function UserProfileCard() {
                 <div data-aos="fade-down-left" className='My-card border rounded w-100'>
                   <div className='card-row d-flex justify-content-center mt-3'>
                     <img src={apiData.avatar_url} className='img-fluid mx-auto  w-25 h-25 border rounded-circle' />
-                    <a href={apiData.html_url} className='btn btn-outline-secondary profile-btn mx-auto mt-4 w-50 h-25' target='_blank'>View Profile</a>
+                    <a href={apiData.html_url} className='btn btn-primary profile-btn mx-auto mt-4 w-50 h-25' target='_blank'>View Profile</a>
                   </div>
                   <div className='card-row d-flex justify-content-center mt-3 '>
 

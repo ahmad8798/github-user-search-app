@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 export default function RepositoryCard() {
+ 
   const [apiData, setApiData] = useState([])
   const [searchValue, setSearchValue] = useState('react')
   const getData = async () => {
@@ -9,14 +10,14 @@ export default function RepositoryCard() {
 
   }
   useEffect(() => {
-  
+    
     getData()
   },[])
   
 
   function RepositoryCardComponent(props) {
     return (
-      <div class="col-md-4 mt-3 mb-3">
+      <div className="col-md-4 mt-3 mb-3">
       <div className="card mb-3 h-100 ">
         <div  className="card-header">
           {props.fullName}

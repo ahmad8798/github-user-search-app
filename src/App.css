@@ -45,3 +45,11 @@
 .show {
   display: block;
 }
+a.active{
+ border-bottom: 2px solid red;
+ font-weight: 600;
+ width: fit-content;
+}
+.My-card{
+  box-shadow: 0 15px 15px -4px lightblue;
+}
